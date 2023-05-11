@@ -48,3 +48,4 @@ end
 
 gem 'blueprinter'
 gem "sassc-rails", "~> 2.1"
+gem 'railties', '~> 7.0', '>= 7.0.4'
