@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 module Flights
   class List
     SORT = 'takeoff_date_time'.freeze
