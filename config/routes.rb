@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      resources :flights, only: [:index]      
+      get '/flights/:id/passengers', to: 'flights#show'
     end
   end
 end
