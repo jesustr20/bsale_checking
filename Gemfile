@@ -47,3 +47,4 @@ group :development do
 end
 
 gem 'blueprinter'
+gem "sassc-rails", "~> 2.1"
