@@ -54,6 +54,13 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: 5 #<%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  reconnect: true
   database: <%= ENV['BSALE_TEST_API_DATABASE_NAME'] %>
-  username: reto_bsale4
-  password: <%= ENV["RETO_BSALE4_DATABASE_PASSWORD"] %>
+  username: <%= ENV['BSALE_TEST_API_DATABASE_USERNAME'] %>
+  password: <%= ENV['BSALE_TEST_API_DATABASE_PASSWORD'] %>
+  host: <%= ENV['BSALE_TEST_API_DATABASE_HOST'] %>
+  port: <%= ENV['BSALE_TEST_API_DATABASE_PORT'] %>
+  socket: /var/run/mysqld/mysqld.sock

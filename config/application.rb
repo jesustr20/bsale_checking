@@ -1,5 +1,5 @@
 require_relative "boot"
-
+require 'dotenv/load'
 require "rails/all"
 # Pick the frameworks you want:
 require "active_model/railtie"
