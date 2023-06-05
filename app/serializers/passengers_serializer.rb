@@ -5,16 +5,7 @@ class PassengersSerializer < Blueprinter::Base
   field :name
   field :age
   field :country
-  field :boarding_pass_ids, name: (:boardingṔassId) do |passenger, options|
-    passenger.boarding_passes.map(&:id)[0]
-  end
-  field :purchase_id, name: (:purchaseId) do |passenger, options|
-    passenger.boarding_passes.map(&:purchase_id)[0]
-  end
-  field :seat_type_id, name: (:seatTypeId) do |passenger, options|
-    passenger.boarding_passes.map(&:seat_type_id)[0]
-  end
-  field :seat_id, name: (:seatId) do |passenger, options|
-    passenger.boarding_passes.map(&:seat_id)[0]
+  field :boarding_passes, blueprint: BoardingPassesSerializer do |passenger, options|
+    passenger.boarding_passes.first
   end
 end
