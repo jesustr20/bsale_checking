@@ -4,7 +4,7 @@ module Api
 
       def passengers
         check_in_data = CheckInService.simulate_check_in(flight)
-
+        
         if check_in_data.nil?
           render json: {code: 404, data: {}}        
         else
