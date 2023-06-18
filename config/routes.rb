@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   namespace :api do
     namespace :v1 do
-      get '/flights/:id/passengers', to: 'flights#show'
+      #get '/flights/:id/passengers', to: 'flights#show'
+      get '/flights/:id/passengers', to: 'flights#passengers'
     end
   end
 end
