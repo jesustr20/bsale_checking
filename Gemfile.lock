@@ -72,6 +72,7 @@ GEM
     builder (3.2.4)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
+    dalli (3.2.5)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
@@ -183,6 +184,7 @@ PLATFORMS
 DEPENDENCIES
   blueprinter
   bootsnap
+  dalli
   debug
   dotenv-rails
   mysql2 (~> 0.5)
